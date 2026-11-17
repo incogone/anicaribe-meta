@@ -1,7 +1,9 @@
 """HTTP and logging shared by every source."""
 from __future__ import annotations
 
+import http.client
 import json
+import socket
 import threading
 import time
 import urllib.error
@@ -15,6 +17,17 @@ BROWSER_AGENT = (
 )
 
 _log_lock = threading.Lock()
+
+# GitHub's runners resolve some hosts to IPv6 addresses they cannot reach ("Network is unreachable"),
+# so every connection is made over IPv4.
+_getaddrinfo = socket.getaddrinfo
+
+
+def _ipv4_only(host, port, family=0, *args, **kwargs):
+    return _getaddrinfo(host, port, socket.AF_INET, *args, **kwargs)
+
+
+socket.getaddrinfo = _ipv4_only
 
 
 def log(*parts):
@@ -65,7 +78,7 @@ def fetch(url, *, body=None, form=None, headers=None, kind="json", attempts=7, t
                 delay = min(delay * 2, 120)
                 continue
             raise
-        except (urllib.error.URLError, TimeoutError, ConnectionError, json.JSONDecodeError) as error:
+        except (urllib.error.URLError, http.client.HTTPException, OSError, json.JSONDecodeError) as error:
             if attempt < attempts:
                 log(f"  {type(error).__name__} from {url[:70]}; waiting {delay}s")
                 time.sleep(delay)

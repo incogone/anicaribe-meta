@@ -1,0 +1,20 @@
+{
+  "schema": 2,
+  "built": "2026-11-17T03:49:10Z",
+  "commit": "dcad8a12c84326a0696a581ca59f7ecdd074a543",
+  "base": "https://cdn.jsdelivr.net/gh/incogone/anicaribe-meta@dcad8a12c84326a0696a581ca59f7ecdd074a543/",
+  "fallback": "https://raw.githubusercontent.com/incogone/anicaribe-meta/dcad8a12c84326a0696a581ca59f7ecdd074a543/",
+  "counts": {
+    "anime": 22690,
+    "manga": 142774,
+    "manhwa": 26564,
+    "manhua": 14339,
+    "mangaTotal": 322972,
+    "onlyOnMangadex": 59725,
+    "onlyOnMyanimelist": 0,
+    "onlyOnMangaupdates": 96608,
+    "onlyOnServers": 23865,
+    "onAServer": 80557
+  },
+  "bytes": 107890203
+}

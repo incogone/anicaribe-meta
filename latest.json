@@ -1,20 +1,20 @@
 {
   "schema": 2,
-  "built": "2026-11-17T06:29:27Z",
-  "commit": "72d82b0e935c6c5a43eaf3c293dd5e3fe871993c",
-  "base": "https://cdn.jsdelivr.net/gh/incogone/anicaribe-meta@72d82b0e935c6c5a43eaf3c293dd5e3fe871993c/",
-  "fallback": "https://raw.githubusercontent.com/incogone/anicaribe-meta/72d82b0e935c6c5a43eaf3c293dd5e3fe871993c/",
+  "built": "2026-11-18T06:00:49Z",
+  "commit": "dfbc9932455a0e1d6f92ad0d4cd88f260640d280",
+  "base": "https://cdn.jsdelivr.net/gh/incogone/anicaribe-meta@dfbc9932455a0e1d6f92ad0d4cd88f260640d280/",
+  "fallback": "https://raw.githubusercontent.com/incogone/anicaribe-meta/dfbc9932455a0e1d6f92ad0d4cd88f260640d280/",
   "counts": {
-    "anime": 22690,
-    "manga": 142775,
-    "manhwa": 26564,
+    "anime": 22692,
+    "manga": 142811,
+    "manhwa": 26566,
     "manhua": 14339,
-    "mangaTotal": 331631,
-    "onlyOnMangadex": 59725,
+    "mangaTotal": 331658,
+    "onlyOnMangadex": 59722,
     "onlyOnMyanimelist": 0,
-    "onlyOnMangaupdates": 96608,
+    "onlyOnMangaupdates": 96602,
     "onlyOnServers": 32523,
-    "onAServer": 99174
+    "onAServer": 99175
   },
-  "bytes": 109677775
+  "bytes": 109706014
 }
